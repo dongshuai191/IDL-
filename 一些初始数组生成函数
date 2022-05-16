@@ -1,0 +1,23 @@
+make_array(列数，行数，维数) #默认输出浮点型
+Result = MAKE_ARRAY ( [D1[, ..., D8]], DIMENSION=vector, INCREMENT=value, /INDEX, /NOZERO, SIZE=vector, START=value, TYPE=type_code, VALUE=value, 
+/BOOLEAN, /BYTE, /COMPLEX, /DCOMPLEX, /DOUBLE, /FLOAT, /INTEGER, /L64, /LONG, /OBJ, /PTR, /STRING, /UINT, /UL64, /ULONG )
+其中index关键字可以使数组元素按照索引排序
+IDL> a=make_array(3,4,/index)
+IDL> print,a
+     0.000000      1.00000      2.00000
+      3.00000      4.00000      5.00000
+      6.00000      7.00000      8.00000
+      9.00000      10.0000      11.0000
+      /value,可以使数组元素全部为指定的value值
+  IDL> M = MAKE_ARRAY(3, 4, /INTEGER, VALUE = 5)
+  IDL> print,m
+       5       5       5
+       5       5       5
+       5       5       5
+       5       5       5
+       
+       
+       
+       intarr()  fltarr() 创建全0数组
+       indgen(),findgen() 创建索引数组
+    
