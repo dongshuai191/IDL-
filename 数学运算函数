@@ -1,0 +1,25 @@
+arr=[[1,2,4],[3,6,9]]
+print,arr
+       1       2       4
+       3       6       9
+       
+       
+一些基础的数学计算函数
+total(),mean(),stddev(标准差)，variance(),max()，对于dimension关键字是一样的
+需要注意的是
+print,max(arr,dimension=1)   #输出每一行的最大值，4,9
+print,max(arr,dimension=2)   #输出每一列的最大值，3,6,9
+
+print,total(arr,1)    #输出  7.00000      18.0000
+
+IDL程序语言要想使用某个函数做中间变量，必须重新使用一个变量名称，例如where函数，格式是
+result=where(expression,count)  #返回的是满足条件的索引，count代表满足条件的个数
+
+
+
+size函数，Result = SIZE( Expression [, /L64] [, /DIMENSIONS | , /FILE_LUN | , /FILE_OFFSET | , /N_DIMENSIONS | , /N_ELEMENTS | , /SNAME, | , /STRUCTURE | , /TNAME | , /TYPE] )
+
+dimension 代表列行数，n_elements代表元素个数，n_dimensions代表维数
+arr2=size(arr,/dimensions)
+print,arr2  —— [波段数，列数，行数]
+help,arr2 —— [维数&波段数]
